@@ -25,12 +25,28 @@ ElectroluxClimateComponent/
 │   ├── strings.json         # Config flow localization strings
 │   └── translations/
 │       └── en.json          # English UI translations
+├── .gitignore               # Standard Python gitignore (pycache, venv, etc.)
 ├── README.md                # Basic project description
 ├── info.md                  # Additional project info
 ├── requirements.txt         # Python dependencies (broadlink==0.19.0)
 ├── hacs.json                # HACS integration metadata
 └── LICENSE                  # Apache 2.0 license
 ```
+
+## Git Configuration
+
+### .gitignore
+Standard Python `.gitignore` covering:
+- **Bytecode:** `__pycache__/`, `*.py[cod]`, `*.so`
+- **Packaging:** `build/`, `dist/`, `*.egg-info/`, `wheels/`
+- **Testing:** `.pytest_cache/`, `.coverage`, `htmlcov/`, `.tox/`
+- **Environments:** `.env`, `.venv`, `venv/`, `env/`
+- **IDE/Tools:** `.mypy_cache/`, `.DS_Store`, `.ropeproject/`
+
+### Branch Naming
+- Feature branches: `feature/<description>`
+- Bug fixes: `fix/<description>`
+- AI assistant branches: `claude/<description>-<session-id>`
 
 ## Key Files and Their Purposes
 
