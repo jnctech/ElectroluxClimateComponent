@@ -1,0 +1,35 @@
+Electrolux Climate Component
+Copyright 2024 jnctech
+
+This project is a fork of the original Electrolux Climate Component.
+
+===============================================================================
+
+Original Work
+===============================================================================
+Electrolux Climate Component
+Copyright 2022 DotEfekts
+https://github.com/DotEfekts/ElectroluxClimateComponent
+
+Licensed under the Apache License, Version 2.0
+
+===============================================================================
+
+Third-Party Dependencies
+===============================================================================
+
+python-broadlink
+-------------------------------------------------------------------------------
+Copyright 2016-2024 Matthew Garrett and contributors
+Licensed under the MIT License
+https://github.com/mjg59/python-broadlink
+
+Used for: Broadlink device communication protocol
+
+Home Assistant Core
+-------------------------------------------------------------------------------
+Copyright Home Assistant Contributors
+Licensed under the Apache License, Version 2.0
+https://github.com/home-assistant/core
+
+Used for: Integration framework and entity base classes
