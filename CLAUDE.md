@@ -48,6 +48,29 @@ Standard Python `.gitignore` covering:
 - Bug fixes: `fix/<description>`
 - AI assistant branches: `claude/<description>-<session-id>`
 
+## Configuration Management Principles
+
+### Never Commit Secrets
+- Device credentials, API keys, and passwords must never be committed
+- The `.gitignore` excludes `.env` files for this reason
+- Device MAC addresses and IPs are stored in Home Assistant's config entries, not in code
+
+### Use Templates Where Possible
+- `strings.json` and `translations/en.json` provide localization templates
+- Config flow uses schema-based validation templates
+- Constants in `const.py` centralize configurable values
+
+### Document Dependencies
+- All Python dependencies listed in `requirements.txt`
+- Home Assistant dependencies declared in `manifest.json`
+- Version pinning (e.g., `broadlink==0.19.0`) ensures reproducibility
+
+### Validate Configuration
+- `config_flow.py` validates user input before saving
+- Device discovery verifies MAC address against known prefixes
+- Config entry migration validates and transforms legacy formats
+- Temperature ranges are bounded by `MIN_TEMP`/`MAX_TEMP` constants
+
 ## Key Files and Their Purposes
 
 ### electrolux.py - Device Protocol
