@@ -101,10 +101,7 @@ This integration uses local network communication via the Broadlink protocol:
 
 ## Contributing
 
-Issues and pull requests are welcome!
-
-- **Report bugs:** [GitHub Issues](https://github.com/jnctech/ElectroluxClimateComponent/issues)
-- **Feature requests:** [GitHub Discussions](https://github.com/jnctech/ElectroluxClimateComponent/discussions)
+Issues and pull requests are welcome! Please use [GitHub Issues](https://github.com/jnctech/ElectroluxClimateComponent/issues) for bug reports, feature requests, and questions.
 
 ## License
 
