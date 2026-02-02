@@ -45,12 +45,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry, add_entitie
         if "sn" in statusJson:
             sn = statusJson["sn"]
         else:
-            logging.error("SN not available on entry")
-            logging.error(statusJson)
-            return False
-
-    if sn == "":
-        return False
+            sn = mac.hex()
+            logging.warning("SN not available on entry, using MAC address as identifier")
 
     ledDev = ElectroluxClimateLedEntity(hass, entry, sn, name, entry.data[CONF_NAME], (host, broadlink.DEFAULT_PORT), mac)
     await ledDev.async_setup()
@@ -83,7 +79,7 @@ class ElectroluxClimateLedEntity(SwitchEntity):
 
     def update(self):
         state = json.loads(self.device.get_status())
-        if state["sn"] != self.sn:
+        if "sn" in state and state["sn"] != self.sn:
             self._attr_available = False
             return
         self._attr_available = True
